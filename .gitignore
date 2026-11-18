@@ -1,0 +1,16 @@
+node_modules/
+.DS_Store
+coverage/
+*.log
+
+# Regenerable offline sound-design reference
+docs/verification/carriers/pink-reference.f32
+
+.local/
+
+# Local credentials and generated Python caches
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc

@@ -1,0 +1,34 @@
+[
+  {
+    "name": "rain-before",
+    "id": "rain-focus",
+    "applicationRmsAtMaster1": 0.02062897360262171,
+    "applicationPeak": 0.08818449825048447,
+    "comparisonGain": 3.0585978567542775,
+    "comparisonTargetDbFS": -24
+  },
+  {
+    "name": "rain-after",
+    "id": "soft-rain-focus",
+    "applicationRmsAtMaster1": 0.020742505733776184,
+    "applicationPeak": 0.0804993286728859,
+    "comparisonGain": 3.041856912459569,
+    "comparisonTargetDbFS": -24
+  },
+  {
+    "name": "water-before",
+    "id": "stream-rest",
+    "applicationRmsAtMaster1": 0.018551878879896413,
+    "applicationPeak": 0.11603961884975433,
+    "comparisonGain": 3.401042819247407,
+    "comparisonTargetDbFS": -24
+  },
+  {
+    "name": "water-after",
+    "id": "water-veil-rest",
+    "applicationRmsAtMaster1": 0.018916985809425014,
+    "applicationPeak": 0.08868853747844696,
+    "comparisonGain": 3.3354010561546823,
+    "comparisonTargetDbFS": -24
+  }
+]

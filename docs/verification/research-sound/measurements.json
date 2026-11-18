@@ -1,0 +1,234 @@
+{
+  "method": "12 s noise, seed 29, 1 s warm-up; Hann Welch 8192/4096; log-spaced 100\u20138000 Hz bands; carrier actual Renderer 48 kHz stereo 60 s, master=1",
+  "noise": [
+    {
+      "name": "white-44100",
+      "kind": "noise",
+      "color": "white",
+      "rate": 44100,
+      "channels": 1,
+      "slopeDbPerOctave": 0.015462047416813415,
+      "rmsDbFS": -4.768921092814425,
+      "mean": -0.00027016225877465736
+    },
+    {
+      "name": "pink-44100",
+      "kind": "noise",
+      "color": "pink",
+      "rate": 44100,
+      "channels": 1,
+      "slopeDbPerOctave": -3.1251766054102497,
+      "rmsDbFS": -15.869531111453014,
+      "mean": 0.00014919701352744409
+    },
+    {
+      "name": "brown-44100",
+      "kind": "noise",
+      "color": "brown",
+      "rate": 44100,
+      "channels": 1,
+      "slopeDbPerOctave": -5.956128206596508,
+      "rmsDbFS": -15.53091496390357,
+      "mean": -0.0029921185319985626
+    },
+    {
+      "name": "white-48000",
+      "kind": "noise",
+      "color": "white",
+      "rate": 48000,
+      "channels": 1,
+      "slopeDbPerOctave": 0.00249115877070876,
+      "rmsDbFS": -4.767827207476169,
+      "mean": -0.0006024650777536509
+    },
+    {
+      "name": "pink-48000",
+      "kind": "noise",
+      "color": "pink",
+      "rate": 48000,
+      "channels": 1,
+      "slopeDbPerOctave": -3.139887470153005,
+      "rmsDbFS": -15.818577959718269,
+      "mean": -0.0016160202398589603
+    },
+    {
+      "name": "brown-48000",
+      "kind": "noise",
+      "color": "brown",
+      "rate": 48000,
+      "channels": 1,
+      "slopeDbPerOctave": -5.983476396575961,
+      "rmsDbFS": -15.176347225550638,
+      "mean": -0.006957890160396289
+    },
+    {
+      "name": "white-96000",
+      "kind": "noise",
+      "color": "white",
+      "rate": 96000,
+      "channels": 1,
+      "slopeDbPerOctave": -0.01444153042892924,
+      "rmsDbFS": -4.766898136676126,
+      "mean": -0.0004953293873097411
+    },
+    {
+      "name": "pink-96000",
+      "kind": "noise",
+      "color": "pink",
+      "rate": 96000,
+      "channels": 1,
+      "slopeDbPerOctave": -3.1017774813441816,
+      "rmsDbFS": -15.866664841286443,
+      "mean": 0.00036777660382287435
+    },
+    {
+      "name": "brown-96000",
+      "kind": "noise",
+      "color": "brown",
+      "rate": 96000,
+      "channels": 1,
+      "slopeDbPerOctave": -6.040597013185512,
+      "rmsDbFS": -12.336681183194793,
+      "mean": -0.011189413237947424
+    },
+    {
+      "name": "brown-v2-44100",
+      "kind": "noise",
+      "color": "brown",
+      "version": "noise-v2",
+      "rate": 44100,
+      "channels": 1,
+      "slopeDbPerOctave": -5.956128205060925,
+      "rmsDbFS": -15.163391001765277,
+      "mean": -0.0031214400013208606
+    },
+    {
+      "name": "brown-v2-48000",
+      "kind": "noise",
+      "color": "brown",
+      "version": "noise-v2",
+      "rate": 48000,
+      "channels": 1,
+      "slopeDbPerOctave": -5.983476396575961,
+      "rmsDbFS": -15.176347225550638,
+      "mean": -0.006957890160396289
+    },
+    {
+      "name": "brown-v2-96000",
+      "kind": "noise",
+      "color": "brown",
+      "version": "noise-v2",
+      "rate": 96000,
+      "channels": 1,
+      "slopeDbPerOctave": -6.040597012898574,
+      "rmsDbFS": -15.344139619711317,
+      "mean": -0.00791469878349999
+    }
+  ],
+  "carrier": [
+    {
+      "name": "carrier-dry",
+      "kind": "carrier",
+      "variant": "dry",
+      "rate": 48000,
+      "channels": 2,
+      "modulationIndex": 0,
+      "rmsDbFS": -33.95534648868399,
+      "peak": 0.0753757506608963,
+      "clippedSamples": 0,
+      "crossfadeEntryJump": 0.0065900798654183745,
+      "loopWrapJump": 0.007486047223210335,
+      "p9999SampleJump": 0.03065719704665332,
+      "relative16HzEnvelope": 0.008192644968904471,
+      "relativeNeighborEnvelopeMax": 0.010560618614437321
+    },
+    {
+      "name": "carrier-wide",
+      "kind": "carrier",
+      "variant": "wide",
+      "rate": 48000,
+      "channels": 2,
+      "modulationIndex": 0.4,
+      "rmsDbFS": -36.5372612433634,
+      "peak": 0.07102830708026886,
+      "clippedSamples": 0,
+      "crossfadeEntryJump": 0.004702249891124666,
+      "loopWrapJump": 0.003316187299787998,
+      "p9999SampleJump": 0.025811015507882014,
+      "relative16HzEnvelope": 0.3748642715786321,
+      "relativeNeighborEnvelopeMax": 0.011642319820034537
+    },
+    {
+      "name": "carrier-band",
+      "kind": "carrier",
+      "variant": "band",
+      "rate": 48000,
+      "channels": 2,
+      "modulationIndex": 0.4,
+      "rmsDbFS": -33.852576319189566,
+      "peak": 0.07729676365852356,
+      "clippedSamples": 0,
+      "crossfadeEntryJump": 0.006595352082513273,
+      "loopWrapJump": 0.007495515048503876,
+      "p9999SampleJump": 0.030685629079678915,
+      "relative16HzEnvelope": 0.251261930552488,
+      "relativeNeighborEnvelopeMax": 0.012287623593941173
+    }
+  ],
+  "presetLevels": [
+    {
+      "id": "even-background",
+      "rate": 44100,
+      "layerGain": 0.1,
+      "rmsDbFS": -39.819020800912206
+    },
+    {
+      "id": "reading",
+      "rate": 44100,
+      "layerGain": 0.35,
+      "rmsDbFS": -39.938695405638455
+    },
+    {
+      "id": "low-background",
+      "rate": 44100,
+      "layerGain": 0.35,
+      "rmsDbFS": -39.39414724470054
+    },
+    {
+      "id": "even-background",
+      "rate": 48000,
+      "layerGain": 0.1,
+      "rmsDbFS": -39.81811514205556
+    },
+    {
+      "id": "reading",
+      "rate": 48000,
+      "layerGain": 0.35,
+      "rmsDbFS": -39.99547081414229
+    },
+    {
+      "id": "low-background",
+      "rate": 48000,
+      "layerGain": 0.35,
+      "rmsDbFS": -39.38645294053699
+    },
+    {
+      "id": "even-background",
+      "rate": 96000,
+      "layerGain": 0.1,
+      "rmsDbFS": -39.81991463460763
+    },
+    {
+      "id": "reading",
+      "rate": 96000,
+      "layerGain": 0.35,
+      "rmsDbFS": -40.05047939393005
+    },
+    {
+      "id": "low-background",
+      "rate": 96000,
+      "layerGain": 0.35,
+      "rmsDbFS": -39.52000906993239
+    }
+  ]
+}

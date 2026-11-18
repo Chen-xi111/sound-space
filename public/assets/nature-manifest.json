@@ -1,0 +1,44 @@
+[
+  {
+    "id": "nature-rain",
+    "revision": 1,
+    "sourceSha256": "31efcbe952a3989a9276774e2d7be61a2dc98fdd785a94d1435fc19cda9a84d1",
+    "trimStartSeconds": 5,
+    "durationMs": 30000,
+    "sampleRate": 24000,
+    "channels": 1,
+    "normalizationGain": 16.134337455808176,
+    "rms": 0.154042636696598,
+    "peak": 0.647674560546875,
+    "bytes": 1440044,
+    "contentHash": "0ecf144994323e32e37bec7c22214118383c011410750b0305561f6bf0681597"
+  },
+  {
+    "id": "nature-stream",
+    "revision": 1,
+    "sourceSha256": "b71def4798508e588229a5f801fefaed9ac51c5dbad224274123c92e6d183fff",
+    "trimStartSeconds": 1,
+    "durationMs": 28000,
+    "sampleRate": 24000,
+    "channels": 1,
+    "normalizationGain": 4.833093702088671,
+    "rms": 0.1421406024330645,
+    "peak": 0.79931640625,
+    "bytes": 1344044,
+    "contentHash": "7c3773fb6275940ee055656708428d9c6bd584a325b878f0f1dbf361c4a1dfc0"
+  },
+  {
+    "id": "nature-wind",
+    "revision": 1,
+    "sourceSha256": "7afb48d4d79d91856198027b89a69d504ebb7cd09b033da5616b74492e034ec5",
+    "trimStartSeconds": 60,
+    "durationMs": 45000,
+    "sampleRate": 24000,
+    "channels": 2,
+    "normalizationGain": 5.268733354960601,
+    "rms": 0.15044872786130223,
+    "peak": 0.7559814453125,
+    "bytes": 4320044,
+    "contentHash": "054646063400357b411813e48d888b9c212d86cdd656dd72bf6d9e58d1fb52f5"
+  }
+]

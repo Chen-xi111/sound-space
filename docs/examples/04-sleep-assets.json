@@ -1,0 +1,127 @@
+{
+  "format": "wave-platform.recipe",
+  "schemaVersion": 1,
+  "exampleOnly": true,
+  "recipe": {
+    "id": "example-sleep-assets",
+    "revision": 1,
+    "title": "结构示例：睡前素材组合",
+    "description": "仅供数据结构审查；频率、增益、时间均为工程占位值，不是已确定的产品预设或研究给定方案。",
+    "scenes": [
+      "sleep"
+    ],
+    "createdAt": "2026-10-05T12:00:00Z",
+    "updatedAt": "2026-10-05T12:00:00Z",
+    "derivedFrom": null,
+    "capabilityProfile": "audio-v1-draft",
+    "layers": [
+      {
+        "id": "rain",
+        "label": "占位雨声",
+        "source": {
+          "kind": "asset",
+          "assetRef": {
+            "id": "fixture-rain",
+            "revision": 1
+          },
+          "playback": {
+            "mode": "loop",
+            "startMs": 0,
+            "loopStartMs": 0,
+            "loopEndMs": 60000,
+            "crossfadeMs": 1000
+          }
+        }
+      },
+      {
+        "id": "music",
+        "label": "占位音乐",
+        "source": {
+          "kind": "asset",
+          "assetRef": {
+            "id": "fixture-music",
+            "revision": 1
+          },
+          "playback": {
+            "mode": "once",
+            "startMs": 0
+          }
+        }
+      }
+    ],
+    "rhythm": {
+      "kind": "none"
+    },
+    "timeline": {
+      "kind": "finite",
+      "repeatCount": 1,
+      "stages": [
+        {
+          "id": "settle",
+          "label": "睡前过渡",
+          "durationMs": 600000,
+          "fadeInMs": 5000,
+          "fadeOutMs": 5000,
+          "layerStates": [
+            {
+              "layerId": "rain",
+              "enabled": true,
+              "gain": 0.12,
+              "params": {
+                "pan": 0
+              }
+            },
+            {
+              "layerId": "music",
+              "enabled": true,
+              "gain": 0.08,
+              "params": {
+                "pan": 0
+              }
+            }
+          ],
+          "rhythmState": null
+        },
+        {
+          "id": "fade",
+          "label": "背景渐弱",
+          "durationMs": 600000,
+          "fadeInMs": 5000,
+          "fadeOutMs": 120000,
+          "layerStates": [
+            {
+              "layerId": "rain",
+              "enabled": true,
+              "gain": 0.08,
+              "params": {
+                "pan": 0
+              }
+            },
+            {
+              "layerId": "music",
+              "enabled": false,
+              "gain": 0.08,
+              "params": {
+                "pan": 0
+              }
+            }
+          ],
+          "rhythmState": null
+        }
+      ]
+    },
+    "completion": {
+      "cue": null,
+      "gain": 0
+    },
+    "provenance": [
+      {
+        "path": "",
+        "kind": "design",
+        "referenceId": null,
+        "locator": null,
+        "note": "全体字段为结构示例；不能进入生产播放。"
+      }
+    ]
+  }
+}

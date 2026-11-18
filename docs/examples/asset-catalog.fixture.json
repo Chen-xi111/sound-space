@@ -1,0 +1,30 @@
+{
+  "format": "wave-platform.asset-catalog-fixture",
+  "schemaVersion": 1,
+  "fixtureOnly": true,
+  "note": "没有音频文件或授权。下面时长仅用于边界校验，不能作为实际素材目录。",
+  "assets": [
+    {
+      "id": "fixture-rain",
+      "revision": 1,
+      "category": "nature",
+      "durationMs": 60000,
+      "channels": 2,
+      "licenseStatus": "unverified",
+      "licenseRef": null,
+      "resourceKey": null,
+      "contentHash": null
+    },
+    {
+      "id": "fixture-music",
+      "revision": 1,
+      "category": "music",
+      "durationMs": 480000,
+      "channels": 2,
+      "licenseStatus": "unverified",
+      "licenseRef": null,
+      "resourceKey": null,
+      "contentHash": null
+    }
+  ]
+}

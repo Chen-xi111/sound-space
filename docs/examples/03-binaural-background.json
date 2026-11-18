@@ -1,0 +1,120 @@
+{
+  "format": "wave-platform.recipe",
+  "schemaVersion": 1,
+  "exampleOnly": true,
+  "recipe": {
+    "id": "example-binaural",
+    "revision": 1,
+    "title": "结构示例：双耳节拍与背景",
+    "description": "仅供数据结构审查；频率、增益、时间均为工程占位值，不是已确定的产品预设或研究给定方案。",
+    "scenes": [
+      "relax",
+      "custom"
+    ],
+    "createdAt": "2026-10-05T12:00:00Z",
+    "updatedAt": "2026-10-05T12:00:00Z",
+    "derivedFrom": null,
+    "capabilityProfile": "audio-v1-draft",
+    "layers": [
+      {
+        "id": "pink",
+        "label": "pink 噪声",
+        "source": {
+          "kind": "noise",
+          "color": "pink",
+          "generatorVersion": "noise-v1-proposed",
+          "seed": 17,
+          "channels": "mono"
+        }
+      },
+      {
+        "id": "beat",
+        "label": "双耳节拍",
+        "source": {
+          "kind": "binaural",
+          "oscillatorVersion": "sine-v1-proposed",
+          "highEar": "right"
+        }
+      }
+    ],
+    "rhythm": {
+      "kind": "binaural",
+      "layerId": "beat"
+    },
+    "timeline": {
+      "kind": "finite",
+      "repeatCount": 1,
+      "stages": [
+        {
+          "id": "listen",
+          "label": "聆听",
+          "durationMs": 480000,
+          "fadeInMs": 2000,
+          "fadeOutMs": 2000,
+          "layerStates": [
+            {
+              "layerId": "pink",
+              "enabled": true,
+              "gain": 0.1,
+              "params": {
+                "pan": 0,
+                "filter": null
+              }
+            },
+            {
+              "layerId": "beat",
+              "enabled": true,
+              "gain": 0.04,
+              "params": {
+                "centerHz": 200,
+                "beatHz": 10
+              }
+            }
+          ],
+          "rhythmState": null
+        },
+        {
+          "id": "winddown",
+          "label": "收尾渐弱",
+          "durationMs": 120000,
+          "fadeInMs": 2000,
+          "fadeOutMs": 30000,
+          "layerStates": [
+            {
+              "layerId": "pink",
+              "enabled": true,
+              "gain": 0.07,
+              "params": {
+                "pan": 0,
+                "filter": null
+              }
+            },
+            {
+              "layerId": "beat",
+              "enabled": true,
+              "gain": 0.02,
+              "params": {
+                "centerHz": 200,
+                "beatHz": 10
+              }
+            }
+          ],
+          "rhythmState": null
+        }
+      ]
+    },
+    "completion": {
+      "cue": null,
+      "gain": 0
+    },
+    "provenance": [
+      {
+        "path": "",
+        "kind": "design",
+        "referenceId": null,
+        "locator": null,
+        "note": "全体字段为结构示例；不能进入生产播放。"
+      }
+    ]
+  }
+}

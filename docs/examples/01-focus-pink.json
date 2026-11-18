@@ -1,0 +1,72 @@
+{
+  "format": "wave-platform.recipe",
+  "schemaVersion": 1,
+  "exampleOnly": true,
+  "recipe": {
+    "id": "example-focus-pink",
+    "revision": 1,
+    "title": "结构示例：单层粉红噪声",
+    "description": "仅供数据结构审查；频率、增益、时间均为工程占位值，不是已确定的产品预设或研究给定方案。",
+    "scenes": [
+      "focus"
+    ],
+    "createdAt": "2026-10-05T12:00:00Z",
+    "updatedAt": "2026-10-05T12:00:00Z",
+    "derivedFrom": null,
+    "capabilityProfile": "audio-v1-draft",
+    "layers": [
+      {
+        "id": "pink",
+        "label": "pink 噪声",
+        "source": {
+          "kind": "noise",
+          "color": "pink",
+          "generatorVersion": "noise-v1-proposed",
+          "seed": 17,
+          "channels": "mono"
+        }
+      }
+    ],
+    "rhythm": {
+      "kind": "none"
+    },
+    "timeline": {
+      "kind": "finite",
+      "repeatCount": 1,
+      "stages": [
+        {
+          "id": "focus",
+          "label": "专注",
+          "durationMs": 1500000,
+          "fadeInMs": 2000,
+          "fadeOutMs": 2000,
+          "layerStates": [
+            {
+              "layerId": "pink",
+              "enabled": true,
+              "gain": 0.15,
+              "params": {
+                "pan": 0,
+                "filter": null
+              }
+            }
+          ],
+          "rhythmState": null
+        }
+      ]
+    },
+    "completion": {
+      "cue": null,
+      "gain": 0
+    },
+    "provenance": [
+      {
+        "path": "",
+        "kind": "design",
+        "referenceId": null,
+        "locator": null,
+        "note": "全体字段为结构示例；不能进入生产播放。"
+      }
+    ]
+  }
+}

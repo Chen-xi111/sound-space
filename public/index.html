@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>声音空间</title><link rel="stylesheet" href="/public/product.css"></head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site-header"><a class="brand" href="#/home">声音空间</a><nav aria-label="主导航"><a href="#/home" data-nav="home">发现声音</a><a href="#/editor" data-nav="editor">自由组合</a><a href="#/mine" data-nav="mine">我的方案</a><a href="#/settings" data-nav="settings">使用说明</a></nav></header>
+<main id="main" tabindex="-1"></main>
+<div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
+<div id="notice" class="notice" role="alert" hidden><span></span><button type="button" id="dismiss-notice">关闭提示</button></div>
+<aside id="mini" class="mini" aria-label="当前播放" hidden><div><strong id="mini-title"></strong><p><span id="mini-state"></span> · <span id="mini-time"></span></p></div><div class="actions"><button type="button" id="mini-toggle">暂停</button><button type="button" id="mini-stop">停止</button><a href="#/player">打开播放页</a></div></aside>
+<dialog id="confirm-dialog" aria-labelledby="confirm-title" aria-describedby="confirm-body"><h2 id="confirm-title"></h2><p id="confirm-body"></p><div class="actions"><button id="confirm-no" type="button">保留当前</button><button id="confirm-yes" type="button" class="primary"></button></div></dialog>
+<footer><span>本地使用 · 无需账户</span><a href="#/about">我们的理念</a><span>专注 · 放松 · 休息</span></footer>
+<script type="module" src="/src/product/app.js"></script>
+</body></html>

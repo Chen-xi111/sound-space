@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>声音实验台 · 音频核心</title><link rel="stylesheet" href="/public/style.css"></head>
+<body><main>
+<header><div class="eyebrow">WAVE PLATFORM / DEVELOPMENT 04</div><h1>声音实验台</h1><p>先把声音与时间做好。这里用于验证音频核心，正式产品界面将在下一阶段设计。</p><span class="badge">本地运行 · 无需账户</span></header>
+<div class="grid"><section class="panel">
+<h2>播放与调度</h2><label for="kind">测试声音</label><select id="kind"><option value="pink">粉红噪声</option><option value="white">白噪声</option><option value="brown">棕噪声</option><option value="binaural">双耳节拍 + 粉红背景（需要立体声耳机）</option><option value="am">振幅调制 + 静音休息循环</option><option value="asset">素材循环（自生成测试音）</option></select>
+<label for="duration">声音阶段时长</label><select id="duration"><option value="15000">15 秒</option><option value="3000">3 秒 · 快速检查</option><option value="60000">60 秒</option></select>
+<label for="volume">主音量 <output id="volume-value">20%</output></label><input id="volume" type="range" min="0" max="100" value="20">
+<div class="buttons"><button id="play" class="primary">开始播放</button><button id="pause" disabled>暂停</button><button id="resume" disabled>继续播放</button><button id="stop" disabled>停止</button></div>
+<div class="buttons"><button id="skip" disabled>跳过阶段</button><button id="extend" disabled>延长 10 秒</button><button id="interrupt" disabled>模拟系统中断</button></div>
+<div class="status" role="status"><strong id="state">尚未播放</strong><span id="position">00:00 / —</span><span id="stage">等待开始</span></div><p id="error" role="alert"></p>
+<details><summary>声音层音量</summary><div id="layers"></div></details>
+<p class="note">这些是工程测试配置，不是最终内容库。自动检查可将主音量设为 0%；锁屏和真实设备中断尚未验证。</p>
+</section><section class="panel">
+<h2>配置检查</h2><p>严格检查字段、引用和播放条件。检查配置不会自动出声。</p><textarea id="recipe" aria-label="方案 JSON" spellcheck="false"></textarea>
+<div class="buttons"><button id="load-demo">载入当前测试配置</button><button id="validate">检查配置</button><button id="play-config">播放此配置</button></div><pre id="validation" aria-live="polite">等待检查</pre>
+</section></div>
+<section class="panel"><div class="section-heading"><h2>运行诊断</h2><button id="self-test">运行静音自检</button></div><p class="note">离线生成采样，检查截止、静音阶段和左右频率；不连接扬声器。</p><pre id="diagnostics" aria-live="polite">尚未运行</pre><h3>浏览器能力</h3><pre id="capabilities"></pre><h3>会话事件</h3><ol id="events"></ol></section>
+<footer>引擎结构：配置校验 → 独占播放 → 音频线程调度 → 输出保护。无外部音频服务。</footer>
+<script type="module" src="/src/app.js"></script></main></body></html>

@@ -1,0 +1,71 @@
+{
+  "format": "wave-platform.recipe",
+  "schemaVersion": 1,
+  "exampleOnly": true,
+  "recipe": {
+    "id": "example-continuous",
+    "revision": 1,
+    "title": "结构示例：持续棕噪声",
+    "description": "仅供数据结构审查；频率、增益、时间均为工程占位值，不是已确定的产品预设或研究给定方案。",
+    "scenes": [
+      "custom"
+    ],
+    "createdAt": "2026-10-05T12:00:00Z",
+    "updatedAt": "2026-10-05T12:00:00Z",
+    "derivedFrom": null,
+    "capabilityProfile": "audio-v1-draft",
+    "layers": [
+      {
+        "id": "brown",
+        "label": "brown 噪声",
+        "source": {
+          "kind": "noise",
+          "color": "brown",
+          "generatorVersion": "noise-v1-proposed",
+          "seed": 17,
+          "channels": "mono"
+        }
+      }
+    ],
+    "rhythm": {
+      "kind": "none"
+    },
+    "timeline": {
+      "kind": "continuous",
+      "stages": [
+        {
+          "id": "continuous",
+          "label": "持续背景",
+          "durationMs": null,
+          "fadeInMs": 2000,
+          "fadeOutMs": 0,
+          "layerStates": [
+            {
+              "layerId": "brown",
+              "enabled": true,
+              "gain": 0.12,
+              "params": {
+                "pan": 0,
+                "filter": null
+              }
+            }
+          ],
+          "rhythmState": null
+        }
+      ]
+    },
+    "completion": {
+      "cue": null,
+      "gain": 0
+    },
+    "provenance": [
+      {
+        "path": "",
+        "kind": "design",
+        "referenceId": null,
+        "locator": null,
+        "note": "全体字段为结构示例；不能进入生产播放。"
+      }
+    ]
+  }
+}

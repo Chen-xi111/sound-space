@@ -1,0 +1,69 @@
+- main:
+  - generic: WAVE PLATFORM / DEVELOPMENT 04
+  - heading "声音实验台" [level=1]
+  - paragraph: 先把声音与时间做好。这里用于验证音频核心，正式产品界面将在下一阶段设计。
+  - generic: 本地运行 · 无需账户
+  - heading "播放与调度" [level=2]
+  - generic: 测试声音
+  - combobox "测试声音":
+    - option "粉红噪声"
+    - option "白噪声"
+    - option "棕噪声" [selected]
+    - option "双耳节拍 + 粉红背景（需要立体声耳机）"
+    - option "振幅调制 + 静音休息循环"
+    - option "素材循环（自生成测试音）"
+  - generic: 声音阶段时长
+  - combobox "声音阶段时长":
+    - option "15 秒"
+    - option "3 秒 · 快速检查" [selected]
+    - option "60 秒"
+  - text: 主音量
+  - status: 0%
+  - slider "主音量": "0"
+  - button "开始播放"
+  - button "暂停" [disabled]
+  - button "继续播放" [disabled]
+  - button "停止" [disabled]
+  - button "跳过阶段" [disabled]
+  - button "延长 10 秒" [disabled]
+  - button "模拟系统中断" [disabled]
+  - status:
+    - strong: 已完成
+    - generic: 00:03 / 00:03
+    - generic: 流程已结束
+  - alert
+  - generic "声音层音量"
+  - paragraph: 这些是工程测试配置，不是最终内容库。自动检查可将主音量设为 0%；锁屏和真实设备中断尚未验证。
+  - heading "配置检查" [level=2]
+  - paragraph: 严格检查字段、引用和播放条件。检查配置不会自动出声。
+  - textbox "方案 JSON": "{ \"format\": \"wave-platform.recipe\", \"schemaVersion\": 1, \"exampleOnly\": false, \"recipe\": { \"id\": \"core-demo-pink\", \"revision\": 1, \"title\": \"工程测试 · pink\", \"description\": \"验证音频和播放流程用，不代表研究方案或最终产品预设。\", \"scenes\": [ \"custom\" ], \"createdAt\": \"2026-10-06T00:00:00Z\", \"updatedAt\": \"2026-10-06T00:00:00Z\", \"derivedFrom\": null, \"capabilityProfile\": \"audio-v1-core\", \"layers\": [ { \"id\": \"background\", \"label\": \"pink\", \"source\": { \"kind\": \"noise\", \"color\": \"pink\", \"generatorVersion\": \"noise-v1\", \"seed\": 29, \"channels\": \"mono\" } } ], \"rhythm\": { \"kind\": \"none\" }, \"timeline\": { \"kind\": \"finite\", \"repeatCount\": 1, \"stages\": [ { \"id\": \"sound\", \"label\": \"声音播放\", \"durationMs\": 15000, \"fadeInMs\": 500, \"fadeOutMs\": 500, \"layerStates\": [ { \"layerId\": \"background\", \"enabled\": true, \"gain\": 0.35, \"params\": { \"pan\": 0, \"filter\": null } } ], \"rhythmState\": null } ] }, \"completion\": { \"cue\": null, \"gain\": 0 }, \"provenance\": [ { \"path\": \"\", \"kind\": \"design\", \"referenceId\": null, \"locator\": null, \"note\": \"工程诊断默认值；来源和数值由产品正式预设阶段另外确定。\" } ] } }"
+  - button "载入当前测试配置"
+  - button "检查配置"
+  - button "播放此配置"
+  - generic: 等待检查
+  - heading "运行诊断" [level=2]
+  - button "运行静音自检"
+  - paragraph: 离线生成采样，检查截止、静音阶段和左右频率；不连接扬声器。
+  - generic: 通过 · 工程配置通过结构与能力检查 通过 · 有限声音按采样时钟结束 通过 · 截止后输出为零 通过 · 采样有效且非空 通过 · 休息阶段完整静音 通过 · 左右载波分别为 195 / 205 Hz
+  - heading "浏览器能力" [level=3]
+  - generic: "{ \"安全上下文\": true, \"WebAudio\": true, \"AudioWorklet\": true, \"跨标签互斥\": true, \"设备变化事件\": true, \"浏览器\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36\", \"后台及锁屏\": \"尚未验证，不作为睡眠可靠定时承诺\" }"
+  - heading "会话事件" [level=3]
+  - list:
+    - listitem: 23:13:48 · 已完成
+    - listitem: 23:13:45 · 播放中
+    - listitem: 23:13:45 · 正在准备
+    - listitem: 23:13:44 · 已完成
+    - listitem: 23:13:41 · 播放中
+    - listitem: 23:13:41 · 正在准备
+    - listitem: 23:13:41 · 已完成
+    - listitem: 23:13:38 · 播放中
+    - listitem: 23:13:38 · 正在准备
+    - listitem: 23:13:27 · 已完成
+    - listitem: 23:13:15 · 播放中
+    - listitem: 23:13:15 · 正在准备
+    - listitem: 23:12:40 · 已完成 · 中断期间已到期，未补播
+    - listitem: 23:12:31 · 播放已中断 · 调试页模拟中断：截止时间继续流逝
+    - listitem: 23:12:31 · 播放中
+    - listitem: 23:12:31 · 正在准备
+    - listitem: 23:12:23 · 尚未播放
+  - generic: 引擎结构：配置校验 → 独占播放 → 音频线程调度 → 输出保护。无外部音频服务。

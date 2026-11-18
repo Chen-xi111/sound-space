@@ -1,0 +1,1126 @@
+TAP version 13
+# Subtest: bundled asset hash and directory metadata agree with actual WAV
+ok 1 - bundled asset hash and directory metadata agree with actual WAV
+  ---
+  duration_ms: 1.719042
+  type: 'test'
+  ...
+# Subtest: only trusted resource mapping is fetched, matching hash decodes successfully
+ok 2 - only trusted resource mapping is fetched, matching hash decodes successfully
+  ---
+  duration_ms: 23.711417
+  type: 'test'
+  ...
+# Subtest: missing resource is blocked before any network call
+ok 3 - missing resource is blocked before any network call
+  ---
+  duration_ms: 0.708375
+  type: 'test'
+  ...
+# Subtest: corrupted asset is rejected before decode
+ok 4 - corrupted asset is rejected before decode
+  ---
+  duration_ms: 1.90275
+  type: 'test'
+  ...
+# Subtest: decode metadata mismatch rejected
+ok 5 - decode metadata mismatch rejected
+  ---
+  duration_ms: 0.528583
+  type: 'test'
+  ...
+# Subtest: inactive asset layers never download
+ok 6 - inactive asset layers never download
+  ---
+  duration_ms: 0.828583
+  type: 'test'
+  ...
+# Subtest: oversized declared file rejected before reading body
+ok 7 - oversized declared file rejected before reading body
+  ---
+  duration_ms: 0.71625
+  type: 'test'
+  ...
+# Subtest: abort after decoding does not permit delayed audio start
+ok 8 - abort after decoding does not permit delayed audio start
+  ---
+  duration_ms: 1.462792
+  type: 'test'
+  ...
+# Subtest: offline diagnostic suite
+ok 9 - offline diagnostic suite
+  ---
+  duration_ms: 66.403542
+  type: 'test'
+  ...
+# Subtest: finite cutoff exact across arbitrary block lengths and sample rates
+ok 10 - finite cutoff exact across arbitrary block lengths and sample rates
+  ---
+  duration_ms: 23.352
+  type: 'test'
+  ...
+# Subtest: pause freezes cursor and resumes same generator sequence
+ok 11 - pause freezes cursor and resumes same generator sequence
+  ---
+  duration_ms: 3.827708
+  type: 'test'
+  ...
+# Subtest: seek skips missed stages; expired seek does not restart
+ok 12 - seek skips missed stages; expired seek does not restart
+  ---
+  duration_ms: 0.438583
+  type: 'test'
+  ...
+# Subtest: extend affects current iteration only, total remains consistent
+ok 13 - extend affects current iteration only, total remains consistent
+  ---
+  duration_ms: 0.27
+  type: 'test'
+  ...
+# Subtest: skip enters next stage and final skip terminates
+ok 14 - skip enters next stage and final skip terminates
+  ---
+  duration_ms: 2.86025
+  type: 'test'
+  ...
+# Subtest: noise deterministic including zero seed, bounded and DC limited
+ok 15 - noise deterministic including zero seed, bounded and DC limited
+  ---
+  duration_ms: 20.18625
+  type: 'test'
+  ...
+# Subtest: white/pink/brown spectral energy shifts toward low frequencies
+ok 16 - white/pink/brown spectral energy shifts toward low frequencies
+  ---
+  duration_ms: 71.8195
+  type: 'test'
+  ...
+# Subtest: binaural channels preserve frequency separation
+ok 17 - binaural channels preserve frequency separation
+  ---
+  duration_ms: 30.525709
+  type: 'test'
+  ...
+# Subtest: AM envelope has specified range and bypass at depth zero
+ok 18 - AM envelope has specified range and bypass at depth zero
+  ---
+  duration_ms: 1.393792
+  type: 'test'
+  ...
+# Subtest: four full-gain layers remain within output ceiling
+ok 19 - four full-gain layers remain within output ceiling
+  ---
+  duration_ms: 9.592291
+  type: 'test'
+  ...
+# Subtest: single-play asset becomes silent without ending stage
+ok 20 - single-play asset becomes silent without ending stage
+  ---
+  duration_ms: 5.802667
+  type: 'test'
+  ...
+# Subtest: crossfade asset loop advances and remains continuous
+ok 21 - crossfade asset loop advances and remains continuous
+  ---
+  duration_ms: 4.110417
+  type: 'test'
+  ...
+# Subtest: completion cue renders in audio thread; seek expiry suppresses it
+ok 22 - completion cue renders in audio thread; seek expiry suppresses it
+  ---
+  duration_ms: 3.927083
+  type: 'test'
+  ...
+# Subtest: rendered snapshot is unaffected by later recipe edits
+ok 23 - rendered snapshot is unaffected by later recipe edits
+  ---
+  duration_ms: 0.253417
+  type: 'test'
+  ...
+# Subtest: skip near natural stage boundary never seeks backwards
+ok 24 - skip near natural stage boundary never seeks backwards
+  ---
+  duration_ms: 10.142416
+  type: 'test'
+  ...
+# Subtest: future stage snapshot is independent of caller mutation
+ok 25 - future stage snapshot is independent of caller mutation
+  ---
+  duration_ms: 0.313292
+  type: 'test'
+  ...
+# Subtest: continuous mode remains finite-valued and only stops explicitly
+ok 26 - continuous mode remains finite-valued and only stops explicitly
+  ---
+  duration_ms: 11.435167
+  type: 'test'
+  ...
+# Subtest: band AM actual sidebands and channel isolation at 44100 Hz
+ok 27 - band AM actual sidebands and channel isolation at 44100 Hz
+  ---
+  duration_ms: 60.822584
+  type: 'test'
+  ...
+# Subtest: band AM actual sidebands and channel isolation at 48000 Hz
+ok 28 - band AM actual sidebands and channel isolation at 48000 Hz
+  ---
+  duration_ms: 69.993125
+  type: 'test'
+  ...
+# Subtest: band AM actual sidebands and channel isolation at 96000 Hz
+ok 29 - band AM actual sidebands and channel isolation at 96000 Hz
+  ---
+  duration_ms: 80.6085
+  type: 'test'
+  ...
+# Subtest: zero-depth band AM is sample-exact dry signal even with filter history
+ok 30 - zero-depth band AM is sample-exact dry signal even with filter history
+  ---
+  duration_ms: 2.850125
+  type: 'test'
+  ...
+# Subtest: unsupported band processor and invalid band fail closed
+ok 31 - unsupported band processor and invalid band fail closed
+  ---
+  duration_ms: 2.5485
+  type: 'test'
+  ...
+# Subtest: preview preserves band configuration and paused/quiet stages emit no residual filter output
+ok 32 - preview preserves band configuration and paused/quiet stages emit no residual filter output
+  ---
+  duration_ms: 9.169792
+  type: 'test'
+  ...
+# Subtest: band preset snapshots and legacy drafts coexist through backup restore
+ok 33 - band preset snapshots and legacy drafts coexist through backup restore
+  ---
+  duration_ms: 5.398375
+  type: 'test'
+  ...
+# Subtest: sleep pure default is consistent and explicit existing mixes remain intact
+ok 34 - sleep pure default is consistent and explicit existing mixes remain intact
+  ---
+  duration_ms: 1.002958
+  type: 'test'
+  ...
+# Subtest: brown v2 keeps RMS stable across sample rates; v1 and 48 kHz anchor remain unchanged
+ok 35 - brown v2 keeps RMS stable across sample rates; v1 and 48 kHz anchor remain unchanged
+  ---
+  duration_ms: 80.063416
+  type: 'test'
+  ...
+# Subtest: soft-rain-focus: new carrier retains an unfiltered live noise layer and coherent stereo sources
+ok 36 - soft-rain-focus: new carrier retains an unfiltered live noise layer and coherent stereo sources
+  ---
+  duration_ms: 8.626958
+  type: 'test'
+  ...
+# Subtest: water-veil-rest: new carrier retains an unfiltered live noise layer and coherent stereo sources
+ok 37 - water-veil-rest: new carrier retains an unfiltered live noise layer and coherent stereo sources
+  ---
+  duration_ms: 2.328833
+  type: 'test'
+  ...
+# Subtest: soft-rain-sleep: new carrier retains an unfiltered live noise layer and coherent stereo sources
+ok 38 - soft-rain-sleep: new carrier retains an unfiltered live noise layer and coherent stereo sources
+  ---
+  duration_ms: 3.2725
+  type: 'test'
+  ...
+# Subtest: recorded nature defaults to pure playback while explicit legacy mixes remain available
+ok 39 - recorded nature defaults to pure playback while explicit legacy mixes remain available
+  ---
+  duration_ms: 1.034542
+  type: 'test'
+  ...
+# Subtest: soft-rain-focus: matching head/tail avoids the crossfade energy dip and reaches the next sample continuously
+ok 40 - soft-rain-focus: matching head/tail avoids the crossfade energy dip and reaches the next sample continuously
+  ---
+  duration_ms: 162.168625
+  type: 'test'
+  ...
+# Subtest: water-veil-rest: matching head/tail avoids the crossfade energy dip and reaches the next sample continuously
+ok 41 - water-veil-rest: matching head/tail avoids the crossfade energy dip and reaches the next sample continuously
+  ---
+  duration_ms: 98.628042
+  type: 'test'
+  ...
+# Subtest: saving a carrier with noise preserves the source version and stereo mix on reopening
+ok 42 - saving a carrier with noise preserves the source version and stereo mix on reopening
+  ---
+  duration_ms: 1.664417
+  type: 'test'
+  ...
+# Subtest: five planning fixtures are structurally valid but never playable
+ok 43 - five planning fixtures are structurally valid but never playable
+  ---
+  duration_ms: 33.570375
+  type: 'test'
+  ...
+# Subtest: all six engineering demos are playable
+ok 44 - all six engineering demos are playable
+  ---
+  duration_ms: 1.315833
+  type: 'test'
+  ...
+# Subtest: exported JSON Schema stays in sync with runtime
+ok 45 - exported JSON Schema stays in sync with runtime
+  ---
+  duration_ms: 3.488709
+  type: 'test'
+  ...
+# Subtest: schema evaluator fails closed on unknown schema keywords
+ok 46 - schema evaluator fails closed on unknown schema keywords
+  ---
+  duration_ms: 0.367792
+  type: 'test'
+  ...
+# Subtest: unknown top-level field
+ok 47 - unknown top-level field
+  ---
+  duration_ms: 0.263584
+  type: 'test'
+  ...
+# Subtest: unknown source field
+ok 48 - unknown source field
+  ---
+  duration_ms: 0.183667
+  type: 'test'
+  ...
+# Subtest: boolean is not a seed
+ok 49 - boolean is not a seed
+  ---
+  duration_ms: 0.193292
+  type: 'test'
+  ...
+# Subtest: zero revision
+ok 50 - zero revision
+  ---
+  duration_ms: 0.18675
+  type: 'test'
+  ...
+# Subtest: nonfinite gain
+ok 51 - nonfinite gain
+  ---
+  duration_ms: 0.204875
+  type: 'test'
+  ...
+# Subtest: blank title
+ok 52 - blank title
+  ---
+  duration_ms: 0.249083
+  type: 'test'
+  ...
+# Subtest: duplicate scene
+ok 53 - duplicate scene
+  ---
+  duration_ms: 0.189375
+  type: 'test'
+  ...
+# Subtest: invalid calendar date
+ok 54 - invalid calendar date
+  ---
+  duration_ms: 0.242209
+  type: 'test'
+  ...
+# Subtest: reversed dates
+ok 55 - reversed dates
+  ---
+  duration_ms: 0.173083
+  type: 'test'
+  ...
+# Subtest: five layers
+ok 56 - five layers
+  ---
+  duration_ms: 0.169333
+  type: 'test'
+  ...
+# Subtest: duplicate layer id
+ok 57 - duplicate layer id
+  ---
+  duration_ms: 0.250125
+  type: 'test'
+  ...
+# Subtest: missing stage layer
+ok 58 - missing stage layer
+  ---
+  duration_ms: 0.13775
+  type: 'test'
+  ...
+# Subtest: unknown stage layer
+ok 59 - unknown stage layer
+  ---
+  duration_ms: 0.159833
+  type: 'test'
+  ...
+# Subtest: duplicate stage layer
+ok 60 - duplicate stage layer
+  ---
+  duration_ms: 0.199083
+  type: 'test'
+  ...
+# Subtest: wrong layer params
+ok 61 - wrong layer params
+  ---
+  duration_ms: 0.161208
+  type: 'test'
+  ...
+# Subtest: zero duration
+ok 62 - zero duration
+  ---
+  duration_ms: 0.314708
+  type: 'test'
+  ...
+# Subtest: negative duration
+ok 63 - negative duration
+  ---
+  duration_ms: 0.557958
+  type: 'test'
+  ...
+# Subtest: fractional duration
+ok 64 - fractional duration
+  ---
+  duration_ms: 0.917458
+  type: 'test'
+  ...
+# Subtest: excessive fades
+ok 65 - excessive fades
+  ---
+  duration_ms: 0.27875
+  type: 'test'
+  ...
+# Subtest: over 24h
+ok 66 - over 24h
+  ---
+  duration_ms: 0.093667
+  type: 'test'
+  ...
+# Subtest: continuous with finite length
+ok 67 - continuous with finite length
+  ---
+  duration_ms: 0.074667
+  type: 'test'
+  ...
+# Subtest: root source missing
+ok 68 - root source missing
+  ---
+  duration_ms: 0.115792
+  type: 'test'
+  ...
+# Subtest: dangling provenance
+ok 69 - dangling provenance
+  ---
+  duration_ms: 0.121084
+  type: 'test'
+  ...
+# Subtest: research lacks locator
+ok 70 - research lacks locator
+  ---
+  duration_ms: 0.071916
+  type: 'test'
+  ...
+# Subtest: double binaural
+ok 71 - double binaural
+  ---
+  duration_ms: 0.905667
+  type: 'test'
+  ...
+# Subtest: AM plus binaural
+ok 72 - AM plus binaural
+  ---
+  duration_ms: 0.199167
+  type: 'test'
+  ...
+# Subtest: missing AM target
+ok 73 - missing AM target
+  ---
+  duration_ms: 0.671542
+  type: 'test'
+  ...
+# Subtest: missing AM state
+ok 74 - missing AM state
+  ---
+  duration_ms: 0.167833
+  type: 'test'
+  ...
+# Subtest: binaural invalid center
+ok 75 - binaural invalid center
+  ---
+  duration_ms: 0.441292
+  type: 'test'
+  ...
+# Subtest: loop crosses duration
+ok 76 - loop crosses duration
+  ---
+  duration_ms: 0.261958
+  type: 'test'
+  ...
+# Subtest: loop crossfade too long
+ok 77 - loop crossfade too long
+  ---
+  duration_ms: 0.132625
+  type: 'test'
+  ...
+# Subtest: unsupported frequency is valid configuration but cannot play
+ok 78 - unsupported frequency is valid configuration but cannot play
+  ---
+  duration_ms: 0.153333
+  type: 'test'
+  ...
+# Subtest: unknown asset is valid but blocked, no silent substitution
+ok 79 - unknown asset is valid but blocked, no silent substitution
+  ---
+  duration_ms: 0.477958
+  type: 'test'
+  ...
+# Subtest: unknown versions, excessive input, invalid JSON rejected
+ok 80 - unknown versions, excessive input, invalid JSON rejected
+  ---
+  duration_ms: 0.876792
+  type: 'test'
+  ...
+# Subtest: date milliseconds compare numerically
+ok 81 - date milliseconds compare numerically
+  ---
+  duration_ms: 0.210084
+  type: 'test'
+  ...
+# Subtest: continuous mode requires explicit shape
+ok 82 - continuous mode requires explicit shape
+  ---
+  duration_ms: 0.208
+  type: 'test'
+  ...
+# Subtest: legitimate four-layer source pool accepted
+ok 83 - legitimate four-layer source pool accepted
+  ---
+  duration_ms: 0.269209
+  type: 'test'
+  ...
+# Subtest: second owner cannot acquire while first holds; release allows new owner
+ok 84 - second owner cannot acquire while first holds; release allows new owner
+  ---
+  duration_ms: 3.832459
+  type: 'test'
+  ...
+# Subtest: missing lock API fails closed
+ok 85 - missing lock API fails closed
+  ---
+  duration_ms: 0.244584
+  type: 'test'
+  ...
+# Subtest: cancelled lock acquisition cannot create a later hidden owner
+ok 86 - cancelled lock acquisition cannot create a later hidden owner
+  ---
+  duration_ms: 0.30825
+  type: 'test'
+  ...
+# Subtest: rapid duplicate start creates only one context
+ok 87 - rapid duplicate start creates only one context
+  ---
+  duration_ms: 32.962333
+  type: 'test'
+  ...
+# Subtest: stop during preparation never reconnects after module resolves
+ok 88 - stop during preparation never reconnects after module resolves
+  ---
+  duration_ms: 1.059167
+  type: 'test'
+  ...
+# Subtest: caller mutation during async startup cannot change snapshot
+ok 89 - caller mutation during async startup cannot change snapshot
+  ---
+  duration_ms: 27.67325
+  type: 'test'
+  ...
+# Subtest: manual pause freezes time and releases playback ownership
+ok 90 - manual pause freezes time and releases playback ownership
+  ---
+  duration_ms: 27.403667
+  type: 'test'
+  ...
+# Subtest: system interruption advances wall time and expires without resuming
+ok 91 - system interruption advances wall time and expires without resuming
+  ---
+  duration_ms: 2.021792
+  type: 'test'
+  ...
+# Subtest: system interruption seeks elapsed position before explicit resume
+ok 92 - system interruption seeks elapsed position before explicit resume
+  ---
+  duration_ms: 26.227542
+  type: 'test'
+  ...
+# Subtest: resume denied by another owner stays paused
+ok 93 - resume denied by another owner stays paused
+  ---
+  duration_ms: 28.3335
+  type: 'test'
+  ...
+# Subtest: stale processor event after stop cannot mark new session completed
+ok 94 - stale processor event after stop cannot mark new session completed
+  ---
+  duration_ms: 27.221333
+  type: 'test'
+  ...
+# Subtest: repeated stop is idempotent and prevents restart while stopping
+ok 95 - repeated stop is idempotent and prevents restart while stopping
+  ---
+  duration_ms: 25.911959
+  type: 'test'
+  ...
+# Subtest: processor failure during pause resolves outstanding pause and closes audio
+ok 96 - processor failure during pause resolves outstanding pause and closes audio
+  ---
+  duration_ms: 0.617917
+  type: 'test'
+  ...
+# Subtest: invalid/fixture configs never acquire context or autoplay
+ok 97 - invalid/fixture configs never acquire context or autoplay
+  ---
+  duration_ms: 0.349
+  type: 'test'
+  ...
+# Subtest: interruption expiry publishes final progress and invalidates delayed worklet messages
+ok 98 - interruption expiry publishes final progress and invalidates delayed worklet messages
+  ---
+  duration_ms: 1.42075
+  type: 'test'
+  ...
+# Subtest: expiry during ownership reacquisition completes without resuming the audio context
+ok 99 - expiry during ownership reacquisition completes without resuming the audio context
+  ---
+  duration_ms: 0.450333
+  type: 'test'
+  ...
+# Subtest: expiry while waiting for audio context recovery cannot replay expired audio
+ok 100 - expiry while waiting for audio context recovery cannot replay expired audio
+  ---
+  duration_ms: 0.5395
+  type: 'test'
+  ...
+# Subtest: interrupted resume seeks using time after audio context recovery
+ok 101 - interrupted resume seeks using time after audio context recovery
+  ---
+  duration_ms: 28.016667
+  type: 'test'
+  ...
+# Subtest: pause resolves only after the browser has actually released the Web Lock
+ok 102 - pause resolves only after the browser has actually released the Web Lock
+  ---
+  duration_ms: 27.640291
+  type: 'test'
+  ...
+# Subtest: launcher reuses only the service identified as this checkout
+ok 103 - launcher reuses only the service identified as this checkout
+  ---
+  duration_ms: 22.926125
+  type: 'test'
+  ...
+# Subtest: launcher treats only a refused connection as safe to start a server
+ok 104 - launcher treats only a refused connection as safe to start a server
+  ---
+  duration_ms: 0.344084
+  type: 'test'
+  ...
+# Subtest: launcher gives a useful conflict message for an HTML or legacy service
+ok 105 - launcher gives a useful conflict message for an HTML or legacy service
+  ---
+  duration_ms: 0.595083
+  type: 'test'
+  ...
+# Subtest: personal combination survives reopening and produces a playable recipe
+ok 106 - personal combination survives reopening and produces a playable recipe
+  ---
+  duration_ms: 9.862042
+  type: 'test'
+  ...
+# Subtest: saving snapshots mutable input before awaiting storage
+ok 107 - saving snapshots mutable input before awaiting storage
+  ---
+  duration_ms: 0.44975
+  type: 'test'
+  ...
+# Subtest: parallel favorite edits in two tabs retain both entries
+ok 108 - parallel favorite edits in two tabs retain both entries
+  ---
+  duration_ms: 0.871959
+  type: 'test'
+  ...
+# Subtest: stale revision cannot overwrite another tab update
+ok 109 - stale revision cannot overwrite another tab update
+  ---
+  duration_ms: 2.332208
+  type: 'test'
+  ...
+# Subtest: quota failure does not mark or replace a saved entry
+ok 110 - quota failure does not mark or replace a saved entry
+  ---
+  duration_ms: 1.241542
+  type: 'test'
+  ...
+# Subtest: corrupt or unsupported data is preserved and never overwritten
+ok 111 - corrupt or unsupported data is preserved and never overwritten
+  ---
+  duration_ms: 0.265959
+  type: 'test'
+  ...
+# Subtest: deletion can be undone, but stale deletion cannot remove an updated entry
+ok 112 - deletion can be undone, but stale deletion cannot remove an updated entry
+  ---
+  duration_ms: 2.004458
+  type: 'test'
+  ...
+# Subtest: unavailable storage or lock support leaves playback data untouched
+ok 113 - unavailable storage or lock support leaves playback data untouched
+  ---
+  duration_ms: 1.595292
+  type: 'test'
+  ...
+# Subtest: unsafe layer identifiers cannot enter saved markup
+ok 114 - unsafe layer identifiers cannot enter saved markup
+  ---
+  duration_ms: 0.197292
+  type: 'test'
+  ...
+# Subtest: malformed saved metadata is preserved without allowing playback
+ok 115 - malformed saved metadata is preserved without allowing playback
+  ---
+  duration_ms: 0.862417
+  type: 'test'
+  ...
+# Subtest: backup preview and import retain existing entries and merge favorites
+ok 116 - backup preview and import retain existing entries and merge favorites
+  ---
+  duration_ms: 2.15325
+  type: 'test'
+  ...
+# Subtest: conflicting backup versions are copied once without replacing a newer local version
+ok 117 - conflicting backup versions are copied once without replacing a newer local version
+  ---
+  duration_ms: 3.519125
+  type: 'test'
+  ...
+# Subtest: import rechecks edits made after preview while holding the library lock
+ok 118 - import rechecks edits made after preview while holding the library lock
+  ---
+  duration_ms: 2.195833
+  type: 'test'
+  ...
+# Subtest: invalid imports never partially change the library
+ok 119 - invalid imports never partially change the library
+  ---
+  duration_ms: 1.650708
+  type: 'test'
+  ...
+# Subtest: import refuses capacity overflow and quota failure atomically
+ok 120 - import refuses capacity overflow and quota failure atomically
+  ---
+  duration_ms: 160.264458
+  type: 'test'
+  ...
+# Subtest: import accepts UTF-8 BOM and registered carriers but strips unknown properties
+ok 121 - import accepts UTF-8 BOM and registered carriers but strips unknown properties
+  ---
+  duration_ms: 1.373292
+  type: 'test'
+  ...
+# Subtest: two simultaneous imports create only one copy and preserve corrupt local data
+ok 122 - two simultaneous imports create only one copy and preserve corrupt local data
+  ---
+  duration_ms: 0.641334
+  type: 'test'
+  ...
+# Subtest: generated copy identifiers cannot collide with later incoming entries
+ok 123 - generated copy identifiers cannot collide with later incoming entries
+  ---
+  duration_ms: 1.154625
+  type: 'test'
+  ...
+# Subtest: rain-focus: pure/mixed recipes and previews retain the same versioned recording
+ok 124 - rain-focus: pure/mixed recipes and previews retain the same versioned recording
+  ---
+  duration_ms: 3.042208
+  type: 'test'
+  ...
+# Subtest: stream-rest: pure/mixed recipes and previews retain the same versioned recording
+ok 125 - stream-rest: pure/mixed recipes and previews retain the same versioned recording
+  ---
+  duration_ms: 2.406625
+  type: 'test'
+  ...
+# Subtest: wind-down: pure/mixed recipes and previews retain the same versioned recording
+ok 126 - wind-down: pure/mixed recipes and previews retain the same versioned recording
+  ---
+  duration_ms: 0.429584
+  type: 'test'
+  ...
+# Subtest: carrier-soft-rain@1: delivered file matches catalog and has bounded audible PCM
+ok 127 - carrier-soft-rain@1: delivered file matches catalog and has bounded audible PCM
+  ---
+  duration_ms: 24.853334
+  type: 'test'
+  ...
+# Subtest: carrier-water-veil@1: delivered file matches catalog and has bounded audible PCM
+ok 128 - carrier-water-veil@1: delivered file matches catalog and has bounded audible PCM
+  ---
+  duration_ms: 16.396542
+  type: 'test'
+  ...
+# Subtest: nature-rain@1: delivered file matches catalog and has bounded audible PCM
+ok 129 - nature-rain@1: delivered file matches catalog and has bounded audible PCM
+  ---
+  duration_ms: 6.928
+  type: 'test'
+  ...
+# Subtest: nature-stream@1: delivered file matches catalog and has bounded audible PCM
+ok 130 - nature-stream@1: delivered file matches catalog and has bounded audible PCM
+  ---
+  duration_ms: 6.420833
+  type: 'test'
+  ...
+# Subtest: nature-wind@1: delivered file matches catalog and has bounded audible PCM
+ok 131 - nature-wind@1: delivered file matches catalog and has bounded audible PCM
+  ---
+  duration_ms: 15.412125
+  type: 'test'
+  ...
+# Subtest: rain-focus: actual PCM crosses the loop boundary at both device sample rates
+ok 132 - rain-focus: actual PCM crosses the loop boundary at both device sample rates
+  ---
+  duration_ms: 6.35975
+  type: 'test'
+  ...
+# Subtest: stream-rest: actual PCM crosses the loop boundary at both device sample rates
+ok 133 - stream-rest: actual PCM crosses the loop boundary at both device sample rates
+  ---
+  duration_ms: 3.573166
+  type: 'test'
+  ...
+# Subtest: wind-down: actual PCM crosses the loop boundary at both device sample rates
+ok 134 - wind-down: actual PCM crosses the loop boundary at both device sample rates
+  ---
+  duration_ms: 3.154333
+  type: 'test'
+  ...
+# Subtest: natural drafts round trip alongside legacy noise drafts without losing source revisions
+ok 135 - natural drafts round trip alongside legacy noise drafts without losing source revisions
+  ---
+  duration_ms: 1.89025
+  type: 'test'
+  ...
+# Subtest: natural sound supports continuous playback, AM target and independent binaural layer
+ok 136 - natural sound supports continuous playback, AM target and independent binaural layer
+  ---
+  duration_ms: 0.3315
+  type: 'test'
+  ...
+# Subtest: production session engines receive the bundled catalog and resource allowlist
+ok 137 - production session engines receive the bundled catalog and resource allowlist
+  ---
+  duration_ms: 0.498666
+  type: 'test'
+  ...
+# Subtest: duplicate natural layers download only once and a missing recording never falls back to noise
+ok 138 - duplicate natural layers download only once and a missing recording never falls back to noise
+  ---
+  duration_ms: 12.400083
+  type: 'test'
+  ...
+# Subtest: personal copy preserves complete sound behavior: soft-rain-focus
+ok 139 - personal copy preserves complete sound behavior: soft-rain-focus
+  ---
+  duration_ms: 6.235292
+  type: 'test'
+  ...
+# Subtest: personal copy preserves complete sound behavior: water-veil-rest
+ok 140 - personal copy preserves complete sound behavior: water-veil-rest
+  ---
+  duration_ms: 1.561584
+  type: 'test'
+  ...
+# Subtest: personal copy preserves complete sound behavior: soft-rain-sleep
+ok 141 - personal copy preserves complete sound behavior: soft-rain-sleep
+  ---
+  duration_ms: 1.521083
+  type: 'test'
+  ...
+# Subtest: personal copy preserves complete sound behavior: rain-focus
+ok 142 - personal copy preserves complete sound behavior: rain-focus
+  ---
+  duration_ms: 0.777
+  type: 'test'
+  ...
+# Subtest: personal copy preserves complete sound behavior: stream-rest
+ok 143 - personal copy preserves complete sound behavior: stream-rest
+  ---
+  duration_ms: 0.715
+  type: 'test'
+  ...
+# Subtest: personal copy preserves complete sound behavior: wind-down
+ok 144 - personal copy preserves complete sound behavior: wind-down
+  ---
+  duration_ms: 0.728625
+  type: 'test'
+  ...
+# Subtest: personal copy preserves complete sound behavior: reading
+ok 145 - personal copy preserves complete sound behavior: reading
+  ---
+  duration_ms: 0.854833
+  type: 'test'
+  ...
+# Subtest: personal copy preserves complete sound behavior: low-background
+ok 146 - personal copy preserves complete sound behavior: low-background
+  ---
+  duration_ms: 0.606625
+  type: 'test'
+  ...
+# Subtest: personal copy preserves complete sound behavior: even-background
+ok 147 - personal copy preserves complete sound behavior: even-background
+  ---
+  duration_ms: 0.663666
+  type: 'test'
+  ...
+# Subtest: personal copy preserves complete sound behavior: gentle-pause
+ok 148 - personal copy preserves complete sound behavior: gentle-pause
+  ---
+  duration_ms: 0.872167
+  type: 'test'
+  ...
+# Subtest: personal copy preserves complete sound behavior: stereo-space
+ok 149 - personal copy preserves complete sound behavior: stereo-space
+  ---
+  duration_ms: 0.882084
+  type: 'test'
+  ...
+# Subtest: personal copy preserves complete sound behavior: before-sleep
+ok 150 - personal copy preserves complete sound behavior: before-sleep
+  ---
+  duration_ms: 0.561083
+  type: 'test'
+  ...
+# Subtest: mixed and pure nature retain the exact asset revision and sources
+ok 151 - mixed and pure nature retain the exact asset revision and sources
+  ---
+  duration_ms: 1.396459
+  type: 'test'
+  ...
+# Subtest: shortening a sleep copy clamps fades without losing the original long ending
+ok 152 - shortening a sleep copy clamps fades without losing the original long ending
+  ---
+  duration_ms: 0.713125
+  type: 'test'
+  ...
+# Subtest: multi-stage or repeated recipes cannot be silently converted or imported
+ok 153 - multi-stage or repeated recipes cannot be silently converted or imported
+  ---
+  duration_ms: 1.871917
+  type: 'test'
+  ...
+# Subtest: personal copies survive save, reopen, backup merge and revision editing
+ok 154 - personal copies survive save, reopen, backup merge and revision editing
+  ---
+  duration_ms: 9.498833
+  type: 'test'
+  ...
+# Subtest: invalid personal templates are rejected without a fallback to free mixing
+ok 155 - invalid personal templates are rejected without a fallback to free mixing
+  ---
+  duration_ms: 1.018917
+  type: 'test'
+  ...
+# Subtest: preferences survive reopening including mute and false natural mode
+ok 156 - preferences survive reopening including mute and false natural mode
+  ---
+  duration_ms: 0.926583
+  type: 'test'
+  ...
+# Subtest: invalid or unavailable preference storage never interrupts playback setup
+ok 157 - invalid or unavailable preference storage never interrupts playback setup
+  ---
+  duration_ms: 0.241833
+  type: 'test'
+  ...
+# Subtest: preferences reject invalid values and unrelated keys without changing previous data
+ok 158 - preferences reject invalid values and unrelated keys without changing previous data
+  ---
+  duration_ms: 0.677583
+  type: 'test'
+  ...
+# Subtest: independent preference writes from two pages retain each others settings
+ok 159 - independent preference writes from two pages retain each others settings
+  ---
+  duration_ms: 0.150542
+  type: 'test'
+  ...
+# Subtest: pure noise starting levels stay within 1 dB at 44100 Hz
+ok 160 - pure noise starting levels stay within 1 dB at 44100 Hz
+  ---
+  duration_ms: 145.008625
+  type: 'test'
+  ...
+# Subtest: pure noise starting levels stay within 1 dB at 48000 Hz
+ok 161 - pure noise starting levels stay within 1 dB at 48000 Hz
+  ---
+  duration_ms: 75.314084
+  type: 'test'
+  ...
+# Subtest: pure noise starting levels stay within 1 dB at 96000 Hz
+ok 162 - pure noise starting levels stay within 1 dB at 96000 Hz
+  ---
+  duration_ms: 138.471542
+  type: 'test'
+  ...
+# Subtest: new white default does not overwrite stored white levels or live gain changes
+ok 163 - new white default does not overwrite stored white levels or live gain changes
+  ---
+  duration_ms: 1.34975
+  type: 'test'
+  ...
+# Subtest: all development presets are playable, describe design provenance and cover five scenes
+ok 164 - all development presets are playable, describe design provenance and cover five scenes
+  ---
+  duration_ms: 7.182792
+  type: 'test'
+  ...
+# Subtest: scene, keyword and headphone filters compose
+ok 165 - scene, keyword and headphone filters compose
+  ---
+  duration_ms: 2.78675
+  type: 'test'
+  ...
+# Subtest: duration edits reject invalid input and preserve rest and repeat semantics
+ok 166 - duration edits reject invalid input and preserve rest and repeat semantics
+  ---
+  duration_ms: 0.466583
+  type: 'test'
+  ...
+# Subtest: preview is a detached, at-most-ten-second audible stage with no cue
+ok 167 - preview is a detached, at-most-ten-second audible stage with no cue
+  ---
+  duration_ms: 2.041334
+  type: 'test'
+  ...
+# Subtest: preview rejects silence and supports a continuous custom source
+ok 168 - preview rejects silence and supports a continuous custom source
+  ---
+  duration_ms: 1.593708
+  type: 'test'
+  ...
+# Subtest: custom combinations enforce four layers including binaural and validate parameters
+ok 169 - custom combinations enforce four layers including binaural and validate parameters
+  ---
+  duration_ms: 2.162542
+  type: 'test'
+  ...
+# Subtest: replacement requires an explicit choice and does not silently stop a session
+ok 170 - replacement requires an explicit choice and does not silently stop a session
+  ---
+  duration_ms: 0.958
+  type: 'test'
+  ...
+# Subtest: preview waits for pause acknowledgement and never automatically resumes the main session
+ok 171 - preview waits for pause acknowledgement and never automatically resumes the main session
+  ---
+  duration_ms: 0.571083
+  type: 'test'
+  ...
+# Subtest: preview failure leaves the original session paused and allows explicit resume
+ok 172 - preview failure leaves the original session paused and allows explicit resume
+  ---
+  duration_ms: 0.333917
+  type: 'test'
+  ...
+# Subtest: preview during interruption preserves the main interrupted state and deadline
+ok 173 - preview during interruption preserves the main interrupted state and deadline
+  ---
+  duration_ms: 0.350333
+  type: 'test'
+  ...
+# Subtest: navigation cancels preview even while the formal pause is pending
+ok 174 - navigation cancels preview even while the formal pause is pending
+  ---
+  duration_ms: 0.56575
+  type: 'test'
+  ...
+# Subtest: rapid preview clicks cannot create overlapping starts, and stop cancels startup
+ok 175 - rapid preview clicks cannot create overlapping starts, and stop cancels startup
+  ---
+  duration_ms: 0.303166
+  type: 'test'
+  ...
+# Subtest: starting a formal session ends preview first and shares the selected volume
+ok 176 - starting a formal session ends preview first and shares the selected volume
+  ---
+  duration_ms: 0.227
+  type: 'test'
+  ...
+# Subtest: preview waits for an interrupted session asynchronous ownership release
+ok 177 - preview waits for an interrupted session asynchronous ownership release
+  ---
+  duration_ms: 0.206958
+  type: 'test'
+  ...
+# Subtest: start waits for a naturally completed preview to release playback ownership
+ok 178 - start waits for a naturally completed preview to release playback ownership
+  ---
+  duration_ms: 0.12175
+  type: 'test'
+  ...
+# Subtest: listen waits for a naturally completed preview to release playback ownership
+ok 179 - listen waits for a naturally completed preview to release playback ownership
+  ---
+  duration_ms: 0.370208
+  type: 'test'
+  ...
+# Subtest: resume waits for a naturally completed preview to release playback ownership
+ok 180 - resume waits for a naturally completed preview to release playback ownership
+  ---
+  duration_ms: 0.116542
+  type: 'test'
+  ...
+# Subtest: formal start snapshots its recipe before waiting for preview shutdown
+ok 181 - formal start snapshots its recipe before waiting for preview shutdown
+  ---
+  duration_ms: 0.10225
+  type: 'test'
+  ...
+# Subtest: stimulus status reports actual target, rate and inactive depth without claiming a brain state
+ok 182 - stimulus status reports actual target, rate and inactive depth without claiming a brain state
+  ---
+  duration_ms: 3.110084
+  type: 'test'
+  ...
+# Subtest: disabled or zero-gain target has no AM effect although other layers still produce sound
+ok 183 - disabled or zero-gain target has no AM effect although other layers still produce sound
+  ---
+  duration_ms: 49.048833
+  type: 'test'
+  ...
+# Subtest: runtime mute overrides saved gain and inactive playback never claims output
+ok 184 - runtime mute overrides saved gain and inactive playback never claims output
+  ---
+  duration_ms: 0.513792
+  type: 'test'
+  ...
+# Subtest: quiet stages and binaural disabled layers are not described as active
+ok 185 - quiet stages and binaural disabled layers are not described as active
+  ---
+  duration_ms: 1.264125
+  type: 'test'
+  ...
+# Subtest: controlled simulation is tied to current production sources and includes negative controls
+ok 186 - controlled simulation is tied to current production sources and includes negative controls
+  ---
+  duration_ms: 7.643542
+  type: 'test'
+  ...
+1..186
+# tests 186
+# suites 0
+# pass 186
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 570.201833
